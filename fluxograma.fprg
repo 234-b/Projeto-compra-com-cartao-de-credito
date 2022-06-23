@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jailson2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-23 07:40:43 "/>
+        <attribute name="created" value="amFpbHNvbjI7REVTS1RPUC04MzI3MjM5OzIwMjItMDYtMjM7IjA2OjU5OjQ5ICI7Mjk2MA=="/>
+        <attribute name="edited" value="amFpbHNvbjI7REVTS1RPUC04MzI3MjM5OzIwMjItMDYtMjM7IjA3OjQwOjQzICI7MTszMDUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <declare name="numerocartao" type="Integer" array="False" size=""/>
+            <declare name="cartao" type="String" array="False" size=""/>
+            <declare name="condicao" type="String" array="False" size=""/>
+            <input variable="nome"/>
+            <output expression="&quot;Cart&#227;o de cr&#233;dito ou d&#233;bito?&quot;" newline="True"/>
+            <input variable="cartao"/>
+            <if expression="cartao==&quot;Cr&#233;dito&quot;">
+                <then>
+                    <output expression="&quot;Por favor, insira o n&#250;mero do seu cart&#227;o de Cr&#233;dito.&quot;" newline="True"/>
+                    <input variable="numerocartao"/>
+                    <output expression="&quot;Venda realizada&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;S&#243; trabalhamos com cart&#227;o de cr&#233;dito&quot;" newline="True"/>
+                    <output expression="&quot;Possui algum outro cart&#227;o que seja Cr&#233;dito?&quot;" newline="True"/>
+                    <input variable="condicao"/>
+                    <if expression="condicao==&quot;Sim&quot;">
+                        <then>
+                            <output expression="&quot;Por favor, insira o n&#250;mero&quot;" newline="True"/>
+                            <input variable="numerocartao"/>
+                            <output expression="&quot;Venda realizada&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Ent&#227;o encerramos nosso atendimento por aqui!&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
